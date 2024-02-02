@@ -18,7 +18,7 @@ function HomePage() {
                 <h2 className="hero-banner-title">
                   Hi, <br />
                   My Name is ,<br />
-                  <span>Bhakti</span>
+                  <span>Joy</span>
                   <br />I build things for web
                 </h2>
               </div>
