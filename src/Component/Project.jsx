@@ -6,7 +6,10 @@ import project4 from "../assets/images/project4.svg";
 import project5 from "../assets/images/project5.svg";
 import link from "../assets/images/link-chain.svg";
 import github from "../assets/images/github.svg";
+import profileimg from "../assets/images/profile.png";
+
 function Project() {
+
   const ProjectList = [
     {
       title: "tiele 1",
@@ -48,7 +51,25 @@ function Project() {
   ];
   return (
     <>
-      <div className="projects">
+    {window.location.pathname=="/projects" ?<>
+    <section className="container">
+          <div className="hero-banner">
+            <div className="hero-banner-content">
+              <div>
+                <h2 className="hero-banner-title">
+                  Hi, <br />
+                  My Name is ,<br />
+                  <span>Joy</span>
+                  <br />I build things for web
+                </h2>
+              </div>
+              <div>
+                <img src={profileimg} alt="profileimg" className="hero-banner_profileimg" />
+              </div>
+            </div>
+          </div>
+        </section>
+    <div className="projects">
         <div>
           <h2 className="section-title">Projects</h2>
           <p className="section-subtitle">Things I’ve built so far</p>
@@ -213,6 +234,174 @@ function Project() {
           </div> */}
         </div>
       </div>
+    </>:<>
+    <div className="projects">
+        <div>
+          <h2 className="section-title">Projects</h2>
+          <p className="section-subtitle">Things I’ve built so far</p>
+        </div>
+        <div className="projects-box">
+          {/* <div className="card-wrapper">
+            <img src={project} />
+            <div className="card-inner">
+              <h3 className="card-title">Project Tile goes here</h3>
+              <p className="card-desc">
+                This is sample project description random things are here in
+                description This is sample project lorem ipsum generator for
+                dummy content
+              </p>
+              <p className="card-project-stack">
+                {" "}
+                <span>Tech stack :</span> HTML , JavaScript, SASS, React
+              </p>
+              <div className="code-details">
+                <a href="#">
+                  <img src={link} alt="" />
+                  <span> Live Preview</span>
+                </a>
+                <a href="#">
+                  <img src={github} alt="" />
+                  <span>View Code</span>
+                </a>
+              </div>
+            </div>
+          </div> */}
+
+          {ProjectList.map((item) => {
+            const { title, description, techUsed } = item;
+            return (
+              <>
+                <div className="card-wrapper">
+                  <img src={project1} />
+                  <div className="card-inner">
+                    <h3 className="card-title">{title}</h3>
+                    <p className="card-desc">{description}</p>
+                    <p className="card-project-stack">
+                      {" "}
+                      <span>Tech stack :</span> {techUsed}
+                    </p>
+                    <div className="code-details">
+                      <a href="#">
+                        <img src={link} alt="" />
+                        <span> Live Preview</span>
+                      </a>
+                      <a href="#">
+                        <img src={github} alt="" />
+                        <span>View Code</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </>
+            );
+          })}
+          {/* 
+          <div className="card-wrapper">
+            <img src={project2} />
+            <div className="card-inner">
+              <h3 className="card-title">Project Tile goes here</h3>
+              <p className="card-desc">
+                This is sample project description random things are here in
+                description This is sample project lorem ipsum generator for
+                dummy content
+              </p>
+              <p className="card-project-stack">
+                {" "}
+                <span>Tech stack :</span> HTML , JavaScript, SASS, React
+              </p>
+              <div className="code-details">
+                <a href="#">
+                  <img src={link} alt="" />
+                  <span> Live Preview</span>
+                </a>
+                <a href="#">
+                  <img src={github} alt="" />
+                  <span>View Code</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="card-wrapper">
+            <div className="card">
+              <img src={project3} alt="projectimg" />
+              <div className="card-inner">
+                <h3 className="card-title">Project Tile goes here</h3>
+                <p className="card-desc">
+                  This is sample project description random things are here in
+                  description This is sample project lorem ipsum generator for
+                  dummy content
+                </p>
+                <p className="card-project-stack">
+                  {" "}
+                  <span>Tech stack :</span> HTML , JavaScript, SASS, React
+                </p>
+                <div className="code-details">
+                  <a href="#">
+                    <img src={link} alt="linkimg" />
+                    <span> Live Preview</span>
+                  </a>
+                  <a href="#">
+                    <img src={github} alt="github" />
+                    <span>View Code</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="card-wrapper">
+            <img src={project4} alt="projectimg" />
+            <div className="card-inner">
+              <h3 className="card-title">Project Tile goes here</h3>
+              <p className="card-desc">
+                This is sample project description random things are here in
+                description This is sample project lorem ipsum generator for
+                dummy content
+              </p>
+              <p className="card-project-stack">
+                {" "}
+                <span>Tech stack :</span> HTML , JavaScript, SASS, React
+              </p>
+              <div className="code-details">
+                <a href="#">
+                  <img src={link} alt="linkimg" />
+                  <span> Live Preview</span>
+                </a>
+                <a href="#">
+                  <img src={github} alt="github" />
+                  <span>View Code</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="card-wrapper">
+            <img src={project5} alt="projectimg" />
+            <div className="card-inner">
+              <h3 className="card-title">Project Tile goes here</h3>
+              <p className="card-desc">
+                This is sample project description random things are here in
+                description This is sample project lorem ipsum generator for
+                dummy content
+              </p>
+              <p className="card-project-stack">
+                {" "}
+                <span>Tech stack :</span> HTML , JavaScript, SASS, React
+              </p>
+              <div className="code-details">
+                <a href="#">
+                  <img src={link} alt="linkimg" />
+                  <span> Live Preview</span>
+                </a>
+                <a href="#">
+                  <img src={github} alt="github" />
+                  <span>View Code</span>
+                </a>
+              </div>
+            </div>
+          </div> */}
+        </div>
+      </div>
+    </>}
+     
     </>
   );
 }

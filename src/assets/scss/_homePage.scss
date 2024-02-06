@@ -28,11 +28,12 @@
 }
 
 .section-title {
+  padding-top: 70px;
   color: #42446e;
   text-align: center;
   font-size: 30px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 7px;
 }
 .section-subtitle {
   color: #666;
@@ -51,7 +52,7 @@
   &-list {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 10px;
     margin-bottom: 20px;
     margin-top: 50px;
@@ -66,11 +67,15 @@
   }
 }
 
+.projects{
+  padding-top: 45px;
+}
 .projects-box {
+  padding-top: 49px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
+  justify-content: space-around;
+  // gap: 25px;
 }
 
 .card-wrapper {

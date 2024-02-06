@@ -5,9 +5,25 @@ import "../assets/scss/_homePage.scss";
 import profileimg from "../assets/images/profile.png";
 import MyStack from "../Component/MyStack";
 import Project from "../Component/Project";
+import AboutMe from "../Component/AboutMe";
 // import Footer from "../Component/Footer";
 
 function HomePage() {
+  const downloadCv = () => {
+    // Create a dynamic download link
+    const link = document.createElement('a');
+    link.href = '../assets/images/Resume.pdf';
+    link.download = 'YourCVFileName.pdf';
+
+    // Append the link to the body
+    document.body.appendChild(link);
+
+    // Programmatically click the link to trigger the download
+    link.click();
+
+    // Remove the link from the document
+    document.body.removeChild(link);
+  };
   return (
     <>
       <main className="main-content">
@@ -26,9 +42,13 @@ function HomePage() {
                 <img src={profileimg} alt="profileimg" className="hero-banner_profileimg" />
               </div>
             </div>
+            <div onClick={downloadCv}>
+              Download CV
+            </div>
           </div>
-          <MyStack/>
-          <Project/>
+          <MyStack />
+          <Project />
+          <AboutMe/>
         </section>
       </main>
       {/* <Footer/> */}

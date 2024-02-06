@@ -1,0 +1,16 @@
+.contactus{
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    &-mailText{
+        font-size: 25px;
+        font-weight: 600;
+    }
+    &-email{
+        font-size: 18px;
+        font-weight: 500;
+        color:rgba(19, 176, 245, 1);
+    }
+}

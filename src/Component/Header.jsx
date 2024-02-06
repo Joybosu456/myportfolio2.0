@@ -22,10 +22,13 @@ function Header() {
                 <Link to="/">Portfolio</Link>
               </li>
               <li>
-                <Link to="/">Contact</Link>
+                <Link to="/contactus">Contact</Link>
               </li>
               <li>
-                <Link to="/">Tech Stack</Link>
+                <Link to="/projects">Projects</Link>
+              </li>
+              <li>
+                <Link to="/mystack">Tech Stack</Link>
               </li>
               <li>
                 <Link to="/">
