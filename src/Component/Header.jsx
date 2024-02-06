@@ -31,19 +31,20 @@ function Header() {
                 <Link to="/mystack">Tech Stack</Link>
               </li>
               <li>
-                <Link to="/">
+                <a href="https://github.com/Joybosu456" target="_blank" rel="noopener noreferrer">
                   <img src={github} alt="github" className="header-img" />
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/">
+                <a href="https://github.com/Joybosu456" target="_blank" rel="noopener noreferrer">
                   <img src={twitter} alt="twitter" className="header-img" />
-                </Link>
+                </a>
+
               </li>
               <li>
-                <Link to="/">
+                <a href="https://www.linkedin.com/in/joy-bosu-59a7b2183/" target="_blank" rel="noopener noreferrer">
                   <img src={linkdin} alt="linkdin" className="header-img" />
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

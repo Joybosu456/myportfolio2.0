@@ -5,6 +5,21 @@
     align-items: center;
     height: 350px;
   }
+  &-resumee{
+    // border: 1px solid red;
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    p{
+      font-size: 25px;
+      color: green;
+      cursor: pointer;
+    }
+    img{
+      width: 30px;
+      height: 30px;
+    }
+  }
 
   &-title {
     color: #42446e;

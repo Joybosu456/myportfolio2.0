@@ -2,16 +2,13 @@ import github from "../assets/images/github.svg";
 import twitter from "../assets/images/twitter.svg";
 import linkdin from "../assets/images/social_linkedin.svg";
 import { Link } from "react-router-dom";
-import "../assets/scss/_base.scss";
 import "../assets/scss/component/_footer.scss";
 
 function Footer() {
   return (
     <>
-      <Footer>
-        <section className="container">
-        <div className="footer-content">
-          <div>Logo</div>
+      <div className="footer-content">
+          <div >Logo</div>
           <div className="footer-bottom-right">
             <p>+91 12345 09876</p>
             <p>info@example.com</p>
@@ -56,8 +53,6 @@ function Footer() {
                 <p className="designed-txt">Designed and built by <span>Pavan MG</span> with <span>Love</span> & <span>Coffee</span></p>
             </div>
         </div>
-        </section>
-      </Footer>
     </>
   );
 }

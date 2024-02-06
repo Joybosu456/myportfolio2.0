@@ -6,7 +6,8 @@ import profileimg from "../assets/images/profile.png";
 import MyStack from "../Component/MyStack";
 import Project from "../Component/Project";
 import AboutMe from "../Component/AboutMe";
-// import Footer from "../Component/Footer";
+import Footer from "../Component/Footer";
+import download from "../assets/images/download.png";
 
 function HomePage() {
   const downloadCv = () => {
@@ -42,16 +43,17 @@ function HomePage() {
                 <img src={profileimg} alt="profileimg" className="hero-banner_profileimg" />
               </div>
             </div>
-            <div onClick={downloadCv}>
-              Download CV
+            <div className="hero-banner-resumee" onClick={downloadCv}>
+              <p>Download CV</p>
+              <img src={download} alt="download" className="header-img" />
             </div>
           </div>
           <MyStack />
           <Project />
-          <AboutMe/>
+          <AboutMe />
         </section>
       </main>
-      {/* <Footer/> */}
+      <Footer/>
     </>
   );
 }
